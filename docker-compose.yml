@@ -7,3 +7,15 @@ services:
       - ACCEPT_EULA=Y
     ports:
       - "1433:1433"
+  
+  catalog-api:
+    image: shop/catalog-api
+    build: 
+      context: .
+      dockerfile: Services\Catalog\Catalog.Api\Dockerfile
+    environment:
+      - SqlConnStr=Server=mssql;Database=CatalogDB;User=sa;Password=Pass@word;
+    depends_on:
+      - mssql
+    ports:
+      - "8080:80"
