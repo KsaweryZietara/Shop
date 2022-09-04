@@ -1,4 +1,6 @@
 using Basket.Api.Data;
+using Basket.Api.IntegrationEvents.EventHandling;
+using MassTransit;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,14 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(opt =>
     ConnectionMultiplexer.Connect(configuration["RedisConnStr"]));
 
 builder.Services.AddScoped<IBasketRepo, RedisBasketRepo>();
+
+builder.Services.AddMassTransit(x => {
+    x.AddConsumer<ProductPriceChangedConsumer>(typeof(ProductPriceChangedConsumerDefinition));
+
+    x.SetKebabCaseEndpointNameFormatter();
+
+    x.UsingRabbitMq((context, cfg) => cfg.ConfigureEndpoints(context));
+});
 
 builder.Services.AddControllers();
 

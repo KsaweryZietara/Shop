@@ -22,6 +22,7 @@ services:
       - SqlConnStr=Server=mssql;Database=CatalogDB;User=sa;Password=Pass@word;
     depends_on:
       - mssql
+      - rabbitmq
     ports:
       - "8080:80"
 
@@ -34,5 +35,12 @@ services:
       - RedisConnStr=redis
     depends_on:
       - redis
+      - rabbitmq
     ports:
       - "8081:80"
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "15672:15672"
+      - "5672:5672"

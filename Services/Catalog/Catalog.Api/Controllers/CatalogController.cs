@@ -1,6 +1,8 @@
 using Catalog.Api.Data;
 using Catalog.Api.Dtos;
+using Catalog.Api.IntegrationEvents.Events;
 using Catalog.Api.Models;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Catalog.Api.Controllers {
@@ -9,8 +11,11 @@ namespace Catalog.Api.Controllers {
     public class CatalogController : ControllerBase {
         private readonly ICatalogRepo repository;
 
-        public CatalogController(ICatalogRepo repository) {
+        private readonly IPublishEndpoint publishEndpoint;
+
+        public CatalogController(ICatalogRepo repository, IPublishEndpoint publishEndpoint) {
             this.repository = repository;
+            this.publishEndpoint = publishEndpoint;
         }
 
         //POST api/v1/catalog/
@@ -60,6 +65,11 @@ namespace Catalog.Api.Controllers {
             if(catalogItem == null){
                 return NotFound();
             }
+
+            await publishEndpoint.Publish<ProductPriceChanged>(new {
+                ProductId = item.Id,
+                NewPrice = item.Price
+            });
 
             return CreatedAtAction(nameof(GetItemById), new {id = item.Id}, null);
         }
