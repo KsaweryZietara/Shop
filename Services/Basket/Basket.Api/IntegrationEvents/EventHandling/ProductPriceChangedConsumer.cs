@@ -1,11 +1,20 @@
-using Basket.Api.IntegrationEvents.Events;
+using Basket.Api.Data;
+using EventBus.IntegrationEvents;
 using MassTransit;
 
 namespace Basket.Api.IntegrationEvents.EventHandling {
 
     public class ProductPriceChangedConsumer : IConsumer<ProductPriceChanged> {
+        private readonly IBasketRepo repository;
+
+        public ProductPriceChangedConsumer(IBasketRepo repository) {
+            this.repository = repository;
+        }
+
         public async Task Consume(ConsumeContext<ProductPriceChanged> context) {
             Console.WriteLine($"Product-{context.Message.ProductId} new price: {context.Message.NewPrice}");
+
+            
         }
     }
 

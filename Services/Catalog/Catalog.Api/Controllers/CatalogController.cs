@@ -1,7 +1,7 @@
 using Catalog.Api.Data;
 using Catalog.Api.Dtos;
-using Catalog.Api.IntegrationEvents.Events;
 using Catalog.Api.Models;
+using EventBus.IntegrationEvents;
 using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 

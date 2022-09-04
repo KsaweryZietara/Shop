@@ -1,4 +1,4 @@
-namespace Basket.Api.IntegrationEvents.Events {
+namespace EventBus.IntegrationEvents {
 
     public interface ProductPriceChanged {
         public int ProductId { get; set; }
