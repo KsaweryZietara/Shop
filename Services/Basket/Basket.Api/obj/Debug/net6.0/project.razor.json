@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj",
+  "FilePath": "c:\\Users\\User\\Shop\\Services\\Basket\\Basket.Api\\Basket.Api.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -16295,7 +16295,7 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "Catalog.Api",
+  "RootNamespace": "Basket.Api",
   "Documents": [],
   "SerializationFormat": "0.2"
 }

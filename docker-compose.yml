@@ -7,6 +7,11 @@ services:
       - ACCEPT_EULA=Y
     ports:
       - "1433:1433"
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
   
   catalog-api:
     image: shop/catalog-api
@@ -19,3 +24,15 @@ services:
       - mssql
     ports:
       - "8080:80"
+
+  basket-api:
+    image: shop/basket-api
+    build: 
+      context: .
+      dockerfile: Services\Basket\Basket.Api\Dockerfile
+    environment:
+      - RedisConnStr=redis
+    depends_on:
+      - redis
+    ports:
+      - "8081:80"
