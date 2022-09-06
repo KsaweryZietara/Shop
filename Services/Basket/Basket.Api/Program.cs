@@ -1,6 +1,7 @@
 using Basket.Api.Data;
-using Basket.Api.IntegrationEvents.EventHandling;
+using Basket.Api.EventHandling;
 using MassTransit;
+using Serilog;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,15 @@ builder.Services.AddMassTransit(x => {
 
     x.UsingRabbitMq((context, cfg) => cfg.ConfigureEndpoints(context));
 });
+
+Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Verbose()
+                .Enrich.WithProperty("ApplicationContext", "Basket.Api")
+                .Enrich.FromLogContext()
+                .WriteTo.Console()
+                .CreateLogger();
+
+builder.Host.UseSerilog(Log.Logger);
 
 builder.Services.AddControllers();
 
@@ -38,4 +48,28 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+try {
+    Log.Information("Application is starting");
+    app.Run();
+}
+catch(Exception ex) {
+    Log.Fatal(ex, "Application failed to start");
+}
+finally
+{
+    Log.CloseAndFlush();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

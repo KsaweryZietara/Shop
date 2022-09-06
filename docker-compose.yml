@@ -2,45 +2,28 @@ version: '3.9'
 services:
   mssql:
     image: mcr.microsoft.com/mssql/server:latest
-    environment:
-      - SA_PASSWORD=Pass@word
-      - ACCEPT_EULA=Y
-    ports:
-      - "1433:1433"
 
   redis:
     image: redis
-    ports:
-      - "6379:6379"
-  
+        
   catalog-api:
     image: shop/catalog-api
     build: 
       context: .
       dockerfile: Services\Catalog\Catalog.Api\Dockerfile
-    environment:
-      - SqlConnStr=Server=mssql;Database=CatalogDB;User=sa;Password=Pass@word;
     depends_on:
       - mssql
       - rabbitmq
-    ports:
-      - "8080:80"
 
   basket-api:
     image: shop/basket-api
     build: 
       context: .
       dockerfile: Services\Basket\Basket.Api\Dockerfile
-    environment:
-      - RedisConnStr=redis
     depends_on:
       - redis
       - rabbitmq
-    ports:
-      - "8081:80"
 
   rabbitmq:
     image: rabbitmq:3-management-alpine
-    ports:
-      - "15672:15672"
-      - "5672:5672"
+

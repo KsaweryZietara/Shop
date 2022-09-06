@@ -5,5 +5,6 @@ namespace Basket.Api.Data {
         Task<CustomerBasket?> GetBasketByIdAsync(string id);
         Task<CustomerBasket?> UpdateBasketAsync(CustomerBasket basket);
         Task<bool> DeleteBasketAsync(string id);
+        IEnumerable<string> GetBuyers();
     }
 }

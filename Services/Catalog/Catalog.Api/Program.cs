@@ -2,6 +2,7 @@ using Catalog.Api.Data;
 using Catalog.Api.Extensions;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
@@ -20,6 +21,15 @@ builder.Services.AddOptions<MassTransitHostOptions>()
         opt.StartTimeout = TimeSpan.FromSeconds(10);
         opt.StopTimeout = TimeSpan.FromSeconds(30);
     });
+
+Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Verbose()
+                .Enrich.WithProperty("ApplicationContext", "Catalog.Api")
+                .Enrich.FromLogContext()
+                .WriteTo.Console()
+                .CreateLogger();
+
+builder.Host.UseSerilog(Log.Logger);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -46,4 +56,14 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+try {
+    Log.Information("Application is starting");
+    app.Run();
+}
+catch(Exception ex) {
+    Log.Fatal(ex, "Application failed to start");
+}
+finally
+{
+    Log.CloseAndFlush();
+}

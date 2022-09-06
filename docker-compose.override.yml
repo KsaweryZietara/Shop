@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  mssql:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
+
+  redis:
+    ports:
+      - "6379:6379"
+        
+  catalog-api:
+    environment:
+      - SqlConnStr=Server=mssql;Database=CatalogDB;User=sa;Password=Pass@word;
+    ports:
+      - "8080:80"
+
+  basket-api:
+    environment:
+      - RedisConnStr=redis
+    ports:
+      - "8081:80"
+
+  rabbitmq:
+    ports:
+      - "15672:15672"
+      - "5672:5672"
