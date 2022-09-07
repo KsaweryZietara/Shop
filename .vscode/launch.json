@@ -32,7 +32,7 @@
             "request": "launch",
             "preLaunchTask": "docker-run: debug",
             "netCore": {
-                "appProject": "${workspaceFolder}/Services/Basket/Basket.Api/Basket.Api.csproj"
+                "appProject": "${workspaceFolder}/ApiGateways/OcelotApiGateway/OcelotApiGateway.csproj"
             }
         }
     ]

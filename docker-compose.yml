@@ -24,6 +24,15 @@ services:
       - redis
       - rabbitmq
 
+  ocelotapigw:
+    image: shop/ocelotapigw
+    build: 
+      context: .
+      dockerfile: ApiGateways\OcelotApiGateway\Dockerfile
+    depends_on:
+      - catalog-api
+      - basket-api
+
   rabbitmq:
     image: rabbitmq:3-management-alpine
 

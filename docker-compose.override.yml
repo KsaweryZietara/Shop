@@ -23,6 +23,10 @@ services:
     ports:
       - "8081:80"
 
+  ocelotapigw:
+    ports:
+      - "5000:80"
+
   rabbitmq:
     ports:
       - "15672:15672"
