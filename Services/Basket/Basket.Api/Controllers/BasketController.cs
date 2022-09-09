@@ -17,7 +17,7 @@ namespace Basket.Api.Controllers {
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(CustomerBasket), StatusCodes.Status200OK)]
-        public async Task<ActionResult<CustomerBasket>> GetBasketById([FromRoute] string id) {
+        public async Task<ActionResult<CustomerBasket>> GetBasketByIdAsync([FromRoute] string id) {
             var basket = await repository.GetBasketByIdAsync(id);
 
             if(basket == null){
@@ -38,7 +38,7 @@ namespace Basket.Api.Controllers {
                 return NotFound();
             }
 
-            return CreatedAtAction(nameof(GetBasketById), new {id = basket.BuyerId}, null);
+            return CreatedAtAction(nameof(GetBasketByIdAsync), new {id = basket.BuyerId}, null);
         }
 
         //DELETE api/v1/basket/{id}

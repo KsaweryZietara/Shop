@@ -1,0 +1,12 @@
+c:\Users\User\Shop\BuildingBlocks\EventBus\bin\Debug\net6.0\EventBus.deps.json
+c:\Users\User\Shop\BuildingBlocks\EventBus\bin\Debug\net6.0\EventBus.dll
+c:\Users\User\Shop\BuildingBlocks\EventBus\bin\Debug\net6.0\EventBus.pdb
+c:\Users\User\Shop\BuildingBlocks\EventBus\obj\Debug\net6.0\EventBus.csproj.AssemblyReference.cache
+c:\Users\User\Shop\BuildingBlocks\EventBus\obj\Debug\net6.0\EventBus.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\User\Shop\BuildingBlocks\EventBus\obj\Debug\net6.0\EventBus.AssemblyInfoInputs.cache
+c:\Users\User\Shop\BuildingBlocks\EventBus\obj\Debug\net6.0\EventBus.AssemblyInfo.cs
+c:\Users\User\Shop\BuildingBlocks\EventBus\obj\Debug\net6.0\EventBus.csproj.CoreCompileInputs.cache
+c:\Users\User\Shop\BuildingBlocks\EventBus\obj\Debug\net6.0\EventBus.dll
+c:\Users\User\Shop\BuildingBlocks\EventBus\obj\Debug\net6.0\refint\EventBus.dll
+c:\Users\User\Shop\BuildingBlocks\EventBus\obj\Debug\net6.0\EventBus.pdb
+c:\Users\User\Shop\BuildingBlocks\EventBus\obj\Debug\net6.0\ref\EventBus.dll

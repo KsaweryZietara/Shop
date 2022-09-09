@@ -17,6 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("Catalog.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Catalog.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Catalog.Api.IntegrationTests")]
 
 // Wygenerowane przez klasę WriteCodeFragment programu MSBuild.
 

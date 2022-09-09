@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj": {}
+    "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj": {
+    "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj",
         "projectName": "EventBus",
-        "projectPath": "C:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj",
+        "projectPath": "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\obj\\",
+        "outputPath": "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

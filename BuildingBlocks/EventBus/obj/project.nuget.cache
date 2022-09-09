@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DalInndlzFRfH8nA0tkMRxRETCFbOc7CCtiliSyk/EeqJiAOCHUIjoe8E3vdRiWsFjXIlhZ7l4DqQBJXZRUkEA==",
+  "dgSpecHash": "cj13UqGS7NI2tOW09/rT7UcSuRP5qsPlfu7CShCeGe3wEPYCre3IdAOSi+d5vKTlvyz4ICGpz698cCiA2H23nA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj",
+  "projectFilePath": "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

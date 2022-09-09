@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Shop\\Services\\Basket\\Basket.Api\\Basket.Api.csproj": {}
+    "c:\\Users\\User\\Shop\\Services\\Basket\\Basket.Api\\Basket.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj": {
+    "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj",
         "projectName": "EventBus",
-        "projectPath": "C:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj",
+        "projectPath": "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\obj\\",
+        "outputPath": "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Shop\\Services\\Basket\\Basket.Api\\Basket.Api.csproj": {
+    "c:\\Users\\User\\Shop\\Services\\Basket\\Basket.Api\\Basket.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Shop\\Services\\Basket\\Basket.Api\\Basket.Api.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Shop\\Services\\Basket\\Basket.Api\\Basket.Api.csproj",
         "projectName": "Basket.Api",
-        "projectPath": "C:\\Users\\User\\Shop\\Services\\Basket\\Basket.Api\\Basket.Api.csproj",
+        "projectPath": "c:\\Users\\User\\Shop\\Services\\Basket\\Basket.Api\\Basket.Api.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Shop\\Services\\Basket\\Basket.Api\\obj\\",
+        "outputPath": "c:\\Users\\User\\Shop\\Services\\Basket\\Basket.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj": {
-                "projectPath": "C:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj"
+              "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj": {
+                "projectPath": "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj"
               }
             }
           }
@@ -113,10 +113,6 @@
             "Serilog.Sinks.Console": {
               "target": "Package",
               "version": "[4.0.1, )"
-            },
-            "Serilog.Sinks.Seq": {
-              "target": "Package",
-              "version": "[5.1.1, )"
             },
             "StackExchange.Redis": {
               "target": "Package",

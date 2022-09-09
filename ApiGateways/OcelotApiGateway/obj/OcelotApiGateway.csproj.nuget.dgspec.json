@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Shop\\ApiGateways\\OcelotApiGateway\\OcelotApiGateway.csproj": {}
+    "c:\\Users\\User\\Shop\\ApiGateways\\OcelotApiGateway\\OcelotApiGateway.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Shop\\ApiGateways\\OcelotApiGateway\\OcelotApiGateway.csproj": {
+    "c:\\Users\\User\\Shop\\ApiGateways\\OcelotApiGateway\\OcelotApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Shop\\ApiGateways\\OcelotApiGateway\\OcelotApiGateway.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Shop\\ApiGateways\\OcelotApiGateway\\OcelotApiGateway.csproj",
         "projectName": "OcelotApiGateway",
-        "projectPath": "C:\\Users\\User\\Shop\\ApiGateways\\OcelotApiGateway\\OcelotApiGateway.csproj",
+        "projectPath": "c:\\Users\\User\\Shop\\ApiGateways\\OcelotApiGateway\\OcelotApiGateway.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Shop\\ApiGateways\\OcelotApiGateway\\obj\\",
+        "outputPath": "c:\\Users\\User\\Shop\\ApiGateways\\OcelotApiGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

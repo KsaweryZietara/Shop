@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.UnitTests\\Catalog.UnitTests.csproj": {}
+    "c:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.UnitTests\\Catalog.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj": {
+    "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj",
-        "projectName": "Catalog.Api",
-        "projectPath": "C:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj",
+        "projectName": "EventBus",
+        "projectPath": "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\obj\\",
+        "outputPath": "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,7 +39,69 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj",
+        "projectName": "Catalog.Api",
+        "projectPath": "c:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj": {
+                "projectPath": "c:\\Users\\User\\Shop\\BuildingBlocks\\EventBus\\EventBus.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.8, )"
@@ -59,6 +121,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.8, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.0-dev-00281, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[2.2.1-dev-00787, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[4.1.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -87,14 +161,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.UnitTests\\Catalog.UnitTests.csproj": {
+    "c:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.UnitTests\\Catalog.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.UnitTests\\Catalog.UnitTests.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.UnitTests\\Catalog.UnitTests.csproj",
         "projectName": "Catalog.UnitTests",
-        "projectPath": "C:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.UnitTests\\Catalog.UnitTests.csproj",
+        "projectPath": "c:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.UnitTests\\Catalog.UnitTests.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.UnitTests\\obj\\",
+        "outputPath": "c:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -111,8 +185,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj": {
-                "projectPath": "C:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj"
+              "c:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj": {
+                "projectPath": "c:\\Users\\User\\Shop\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj"
               }
             }
           }
@@ -130,6 +204,10 @@
             "FluentAssertions": {
               "target": "Package",
               "version": "[6.7.0, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.0.6, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
