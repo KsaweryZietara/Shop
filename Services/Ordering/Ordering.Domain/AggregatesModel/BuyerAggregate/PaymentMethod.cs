@@ -1,3 +1,4 @@
+using Ordering.Domain.Exceptions;
 using Ordering.Domain.SeedWork;
 
 namespace Ordering.Domain.AggregatesModel.BuyerAggregate {
@@ -10,7 +11,7 @@ namespace Ordering.Domain.AggregatesModel.BuyerAggregate {
         private DateTime _expiration;
 
         private int _cardTypeId;
-        public CardType CardType { get; private set; }
+        public CardType? CardType { get; private set; }
 
         protected PaymentMethod() { }
 
@@ -21,12 +22,12 @@ namespace Ordering.Domain.AggregatesModel.BuyerAggregate {
                              string cardHolderName,
                              DateTime expiration) {
 
-            _cardNumber = !string.IsNullOrEmpty(cardNumber) ? cardNumber : throw new OrderDomainException(nameof(cardNumber));
-            _securityNumber = !string.IsNullOrEmpty(securityNumber) ? securityNumber : throw new OrderDomainExeption(nameof(securityNumber));
-            _cardHolderName = !string.IsNullOrEmpty(cardHolderName) ? cardHolderName : throw new OrderDomainException(nameof(cardHolderName));
+            _cardNumber = !string.IsNullOrEmpty(cardNumber) ? cardNumber : throw new OrderingDomainException(nameof(cardNumber));
+            _securityNumber = !string.IsNullOrEmpty(securityNumber) ? securityNumber : throw new OrderingDomainException(nameof(securityNumber));
+            _cardHolderName = !string.IsNullOrEmpty(cardHolderName) ? cardHolderName : throw new OrderingDomainException(nameof(cardHolderName));
 
             if(expiration < DateTime.UtcNow) {
-                throw new OrderDomainException(nameof(expiration));
+                throw new OrderingDomainException(nameof(expiration));
             } 
 
             _alias = alias;
