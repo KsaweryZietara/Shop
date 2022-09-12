@@ -1,3 +1,5 @@
+using Ordering.Domain.Events;
+using Ordering.Domain.Exceptions;
 using Ordering.Domain.SeedWork;
 
 namespace Ordering.Domain.AggregatesModel.OrderAggregate {

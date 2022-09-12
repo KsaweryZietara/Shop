@@ -1,3 +1,4 @@
+using Ordering.Domain.Events;
 using Ordering.Domain.SeedWork;
 
 namespace Ordering.Domain.AggregatesModel.BuyerAggregate {
@@ -28,7 +29,7 @@ namespace Ordering.Domain.AggregatesModel.BuyerAggregate {
                 .SingleOrDefault(p => p.IsEqualTo(cardTypeId, cardNumber, expiration));
 
             if(existingPayment != null) {
-                AddDomainEvent(new BuyerAndPaymentMethodVerifiedDomainEvent(this, existingPayment, orderId));
+                AddDomainEvent(new BuyerPaymentMethodVerifiedDomainEvent(this, existingPayment, orderId));
 
                 return existingPayment;
             }
@@ -37,7 +38,7 @@ namespace Ordering.Domain.AggregatesModel.BuyerAggregate {
 
             _paymentMethods.Add(payment);
 
-            AddDomainEvent(new BuyerAndPaymentMethodVerifiedDomainEvent(this, payment, orderId));
+            AddDomainEvent(new BuyerPaymentMethodVerifiedDomainEvent(this, payment, orderId));
 
             return payment;
         }
