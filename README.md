@@ -1,5 +1,5 @@
 # Shop
-Microservices shop application built using .NET 6.0, Entity Framework, SQL and Redis databases based on Microsoft eShopOnContainers.
+Microservices online shop built using .NET 6.0, Entity Framework, SQL and Redis databases based on Microsoft eShopOnContainers.
 
 ## Running the app
 To build and run app:
